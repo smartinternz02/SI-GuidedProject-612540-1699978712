@@ -1,0 +1,74 @@
+ <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            background-color: #fff;
+            padding: 5px;
+            text-align: right;
+        }
+
+        #header a {
+            color: red;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #content {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ff0000;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #covid19Content {
+            background-image: url("C:\\Users\\adarsha\\Desktop\\covid.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        #footer {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>

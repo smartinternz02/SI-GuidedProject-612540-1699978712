@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Awareness</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            background-color: #fff;
+            padding: 5px;
+            text-align: right;
+        }
+
+        #header a {
+            color: red;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #content {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #ff0000;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #covid19Content {
+            background-image: url("static/covid.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        #footer {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <a href="#" onclick="showContent('covid19')">COVID-19</a>
+    <a href="#" onclick="showContent('about')">About</a>
+    <a href="#" onclick="showContent('precautions')">Precautions</a>
+    <a href="#" onclick="showContent('vaccinations')">Vaccinations</a>
+    <a href="#" onclick="showContent('test')">Test</a>
+</div>
+
+<div id="covid19Content">
+    <h1>Smart Assistant for COVID-19 Protection</h1><br></br><br></br>
+    <p>Be safe from coronavirus infection.</p><br></br><br></br>
+    <p>Be smart and inform yourself about it.</p><br></br>
+    <p>Be kind and support one another.</p><br></br>
+    <button id="submitBtn">FIND OUT MORE</button><br></br>
+</div>
+
+<script>
+    function showContent(section) {
+        document.getElementById('covid19Content').style.display = 'none';
+        document.getElementById('aboutContent').style.display = 'none';
+        document.getElementById('precautionsContent').style.display = 'none';
+        document.getElementById('vaccinationsContent').style.display = 'none';
+        document.getElementById('testContent').style.display = 'none';
+
+        document.getElementById(section + 'Content').style.display = 'block';
+    }
+
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Add your logic here to handle file submission or any other actions before redirection
+        // For now, let's redirect to "pred.html"
+        window.location.href = 'pred.html';
+    });
+</script>
+
+<div id="aboutContent" style="display: none; background-color: orange; color: #000; padding: 50px;" class="center-content">
+    <h2>GLANCE</h2>
+    <p>Coronavirus, a highly contagious respiratory virus, emerged in late 2019, causing the global COVID-19 pandemic.<br> <br></br>Symptoms range from mild respiratory issues to severe pneumonia, with the elderly and those with underlying health conditions at higher risk. <br></br><br>Prevention measures include vaccination, mask-wearing, and social distancing.<br></br> <br>Public health efforts continue worldwide.</p><br></br><br></br><br></br><br></br>
+    <button>GET STARTED</button>
+</div>
+
+<div id="precautionsContent" style="display: none; background-color: #FF00FF; color: #000; padding: 50px;" class="center-content">
+    <h2>PRECAUTIONS</h2>
+    <ul>
+        <li><u><u><b>Wear a Mask:</b><br></br></u></u><br> Use a mask that covers your nose and mouth in public settings, especially when social distancing is difficult.</li><br></br>
+        <li><u><u><b>Practice Social Distancing:</b><br></br></u></u><br> Maintain at least 6 feet (about 2 meters) of distance from others who are not from your household.</li><br></br>
+        <li><u><u><b>Wash Your Hands Frequently:</b><br></br></u></u><br> Wash your hands with soap and water for at least 20 seconds, especially after being in a public place or after coughing/sneezing.</li><br></br>
+        <li><u><u><b>Use Hand Sanitizer:</b><br></br></u></u><br> If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol.</li><br></br>
+        <li><u><u><b>Avoid Touching Your Face:</b><br></br></u></u> <br> Avoid touching your eyes, nose, and mouth with unwashed hands, as this can introduce the virus into your body.</li>
+    </ul>
+</div>
+
+<div id="vaccinationsContent" style="display: none; background-image: url('file:///C:/Users/adarsha/Desktop/vaccination.jpg'); height: 90vh;">
+</div>
+
+<div id="testContent" style="display: none; background-color: purple; color: #000; padding: 50px; text-align: center;">
+    <h2>To Know More About Products</h2>
+    <button>Click Here</button>
+    <br><br><br><br><br><br><br><br><br><br><br></br><br></br>
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button id="submitBtnTest" type="submit">Submit</button>
+    </form>
+    <br></br><br></br><br></br><br></br>
+</div>
+
+
+<div id="footer">
+    &copy; 2023 COVID-19 Awareness Page
+</div>
+
+<script>
+    document.getElementById('submitBtnTest').addEventListener('click', function() {
+        // Add your logic here to handle file submission or any other actions before redirection
+        // For now, let's redirect to "pred.html"
+        window.location.href = "pred.html";
+    });
+</script>
+
+</body>
+</html>
